@@ -1,0 +1,30 @@
+﻿@model Movies.Models.Character
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Character</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Movie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Movie.MovieID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CharacterName">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
